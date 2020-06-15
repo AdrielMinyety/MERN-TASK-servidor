@@ -20,7 +20,7 @@ app.use( express.json({ extended: true }) );
 
 // puerto de la app
 // app's port
-const PORT = 4000;
+const port = process.env.port || 4000;
 
 // importar rutas
 // import routes
@@ -31,6 +31,6 @@ app.use('/api/tareas', require('./routes/tareas'));
 
 // arrancar la app
 // runing the app
-app.listen(PORT, () => {
-    console.log(`El servidor está en el puerto ${PORT}`)
+app.listen(port, '0.0.0.0', () => {
+    console.log(`El servidor está en el puerto ${port}`);
 });
