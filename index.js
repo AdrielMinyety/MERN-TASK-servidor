@@ -12,7 +12,7 @@ conectarDB();
 
 // Establecer una lista blanca y comprobarlo
 // Set up a whitelist and check against it:
-var whitelist = ['https://eloquent-jang-b81985.netlify.app/']
+var whitelist = ['https://eloquent-jang-b81985.netlify.app/'];
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
