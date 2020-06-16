@@ -18,6 +18,7 @@ app.use( express.json({ extended: true }) );
 // app's port
 const port = process.env.PORT || 3001;
 
+// settings
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   next();
