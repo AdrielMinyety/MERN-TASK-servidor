@@ -16,7 +16,12 @@ app.use( express.json({ extended: true }) );
 
 // puerto de la app
 // app's port
-const port = process.env.port || 4000;
+const port = process.env.PORT || 3001;
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
 
 // habilitar CORS
 // use CORS
