@@ -119,7 +119,7 @@ exports.actualizarTarea = async (req, res) => {
         tarea = await Tarea.findOneAndUpdate({_id : req.params.id}, nuevaTarea, { new : true });
 
         res.json({
-            msg : 'tarea actualizada',
+            msg : 'Tarea actualizada',
             tarea
         });
 
