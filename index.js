@@ -10,10 +10,6 @@ const app = express();
 // conect to DataBase
 conectarDB();
 
-// habilitar CORS
-// use CORS
-app.use( cors() );
-
 // habilitar express.json
 // enabling express.json
 app.use( express.json({ extended: true }) );
@@ -21,6 +17,10 @@ app.use( express.json({ extended: true }) );
 // puerto de la app
 // app's port
 const port = process.env.port || 4000;
+
+// habilitar CORS
+// use CORS
+app.use( cors() );
 
 // importar rutas
 // import routes
