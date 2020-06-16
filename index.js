@@ -25,7 +25,7 @@ var corsOptions = {
 
 // habilitar CORS
 // use CORS
-app.use(cors(corsOptions));
+app.use( cors(corsOptions) );
 
 // habilitar express.json
 // enabling express.json
