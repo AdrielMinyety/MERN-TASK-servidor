@@ -10,22 +10,9 @@ const app = express();
 // conect to DataBase
 conectarDB();
 
-// Establecer una lista blanca y comprobarlo
-// Set up a whitelist and check against it:
-var whitelist = ['https://eloquent-jang-b81985.netlify.app/'];
-var corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-}
-
 // habilitar CORS
 // use CORS
-app.use( cors(corsOptions) );
+app.use( cors() );
 
 // habilitar express.json
 // enabling express.json
